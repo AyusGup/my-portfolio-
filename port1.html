@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<style>
+.c2{
+font-family: 'Ubuntu';
+}
+.container{
+ display: flex;
+ width: 100vw;
+ height: 90vh;
+ justify-content: center;
+}
+nav{
+width: 100vw;
+height: 80px;
+}
+nav ul{
+float: right;
+list-style-type: none;
+}
+nav ul li{
+display: inline-block;
+line-height: 80px;
+text-transform: uppercase;
+}
+nav ul li a{
+text-decoration: none;
+color: saddlebrown;
+padding: 8px 20px;
+}
+nav ul li a.active,a:hover{
+background-color: burlywood;
+}
+#checkbtn{
+float: right;
+font-size:80px;
+margin-right: 20px;
+margin-top: 10px;
+color: saddlebrown;
+display:none; 
+}
+#check{
+display: none;
+}
+#check:checked ~ ul{
+right:-12px;
+}
+@media(min-width:1200px){
+#checkbtn{
+display: none;
+}
+nav ul li a{
+font-size: 30px;
+font-weight: bold;
+}
+}
+@media( max-width:1200px ){
+#checkbtn{
+display: block;
+}
+nav ul{
+display: flex;
+width: 95vw;
+height: 100vh;
+background-color: burlywood;
+position: fixed;
+top: 90px;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+right: -110%;
+transition: .5s;
+border-radius: 25px;
+}
+nav ul li{
+display: block;
+line-height:150px;
+}
+nav ul li a{
+text-decoration: none;
+color: saddlebrown;
+padding: 8px 20px;
+font-weight: bold;
+font-size: 30px;
+border-radius: 10px;
+}
+nav ul li a.active,a:hover{
+background-color: rosybrown;
+transition: all 0.5s;
+}
+@media (max-width:900px){
+body {
+  background:url('/cotton-pod-branch-green-background.jpg');
+  background-size:105vw 105vh;
+  background-repeat: no-repeat;
+  font-size: 30px;
+}
+.c1{
+align-self: flex-start;
+display: flex;
+height: 200px;
+width: 180px;
+margin-top: 50px;
+background : url('/IMG-20230219-WA0006.jpg');
+background-size: 100% 175px;
+background-repeat: no-repeat;
+justify-content: center;
+}
+.c1 div{
+font-size: 20px;
+margin-bottom: 0;
+}
+nav{
+height: 50px;
+}
+#checkbtn{
+display: block;
+font-size: 30px;
+}
+nav ul{
+display: flex;
+width: 93vw;
+height: 100vh;
+background-color: burlywood;
+position: fixed;
+top:40px;
+justify-content: center;
+align-items: center;
+flex-direction:column;
+right: -110%;
+transition: .5s;
+border-radius: 25px;
+}
+nav ul li{
+display: block;
+line-height:50px;
+}
+nav ul li a{
+text-decoration: none;
+color: saddlebrown;
+padding: 8px 20px;
+font-weight: bold;
+border-radius: 10px;
+font-size: 15px;
+}
+nav ul li a.active,a:hover{
+background-color: rosybrown;
+transition: all 0.5s;
+}
+}
+}
+</style>
+<body>
+<nav>
+<input type="checkbox" id="check">
+<label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+<ul>
+<li> <a class="active" href="index2 .html">Home</a></li>
+<li><a href="index3.html">CV</a></li>
+<li><a href="index4.html">Projects</a></li>
+<li><a href="index5.html">About</a></li>
+<li><a href="index6.html">Contact</a></li>
+</ul>
+</nav>
+<div class="container">
+  <div class="c1">
+  <div>Ayush Gupta</div>
+  </div>
+  <!-- Project -->
+  <div class="c3" style="display: flex">
+  </div>
+</div>
+</body>
+</html>
