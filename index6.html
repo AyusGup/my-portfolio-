@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+nav{
+position:absolute;
+height: 80px;
+width: 100vw;
+top:10px;
+}
+#go{
+float: right ;
+font-size: 40px;
+text-decoration: none;
+margin-right: 10px;
+line-height: 80px;
+height: 80px;
+border-radius:10px;
+background-color: goldenrod;
+}
+#form div{
+font-size: 40px;
+}
+body {
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center ;
+align-items: center ;
+}
+.btn:hover,.send:hover{
+ text-decoration: underline;
+ color: blue;
+ cursor: pointer;
+}
+#form{
+    border: 5px gold solid;
+    height: 1000px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center ;
+  }
+#form button:hover{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  }
+#form button{
+width: 650px;
+color: grey;
+}
+.item{
+    border: 2px black solid;
+    font-size:28px;
+    width: 640px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+#text{
+font-size: 20px;
+border-radius: 10px ;
+width: 650px;
+}
+@media (max-width: 1400px){
+nav{
+height: 80px;
+}
+#go{
+font-size: 40px;
+line-height: 55px;
+margin-right: 10px;
+height: 80px;
+}
+#form{
+width: 600px;
+height: 900px;
+}
+.item{
+width: 460px;
+}
+#form button{
+width: 470px;
+}
+#text{
+font-size: 20px;
+width: 470px;
+}
+}
+@media (max-width: 900px){
+nav{
+top: 5px;
+height: 40px;
+}
+#go{
+font-size: 15px;
+line-height: 20px;
+margin-right: 5px;
+height: 30px;
+}
+#form{
+width: 250px;
+height: 350px;
+}
+#form div{
+font-size: 20px ;
+}
+.item{
+height: 20px;
+width: 200px;
+font-size: 20px;
+margin:6px;
+}
+#form button{
+height: 25px ;
+width: 210px;
+font-size: 20px;
+line-height: 5px;
+}
+#text{
+font-size:5px;
+width: 206px;
+}
+}
+</style>
+<nav>
+  <a id="go" href="index.html"> <-Go To Home</a>
+</nav>
+<body>
+  <!-- Project -->
+<div id="form">
+  <form onsubmit="sendemail();reset();return false;">
+    <div style="text-align: center;color: darkviolet;font-weight: bold">
+      Contact With Me
+    </div>
+    <input type="text" class="item" id="myname" placeholder="your name">
+    <input type="number" class="item" id="phone" placeholder="your mobile no">
+    <input type="email" class="item" id="email" placeholder="your email id">
+    <textarea name="text" id="text" cols="30" rows="6" placeholder="type your text"></textarea>
+    <button type="submit" class="item">send</button>
+    <button type="reset" class="item">reset</button>
+  </form>
+</div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendemail(){
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username:"&@gmail.com",
+      Password: "#",
+      To: "&.com",
+      From: document.getElementById("email").value,
+      Subject: "This is the subject",
+      Body: "Name:" + document.getElementById("myname").value +"<br> Email:" +document.getElementById("email").value +"<br>Phone-no:"+ document.getElementById("phone").value +"<br>Message:"+document.getElementById("text").value
+    }).then(
+      message => alert("Message sent successfully")
+    );
+    }
+  </script>
+</body>
+</html>
