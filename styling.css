@@ -1,5 +1,5 @@
 body {
-  background:url('/cotton-pod-branch-green-background.jpg');
+  background:url('./cotton-pod-branch-green-background.jpg');
   background-size:105vw 105vh;
   background-repeat: no-repeat;
 }
@@ -9,7 +9,7 @@ height: 600px;
 width: 450px;
 align-self: flex-start;
 margin-top: 130px;
-background : url('/IMG-20230219-WA0006.jpg');
+background : url('../IMG-20230219-WA0006.jpg');
 background-size: 450px 510px;
 background-repeat: no-repeat;
 justify-content: center;
