@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+nav{
+position: absolute ;
+top: 0;
+}
+#form div{
+font-size: 40px;
+}
+body {
+width: 100vw;
+height: 100vh;
+display: flex;
+flex-direction: column;
+justify-content: center ;
+align-items: center ;
+}
+.btn:hover,.send:hover{
+ text-decoration: underline;
+ color: blue;
+ cursor: pointer;
+}
+#form{
+    border: 5px gold solid;
+    height: 1000px;
+    width: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center ;
+    animation-name: anime;
+    animation-delay:0.5s;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+  }
+@keyframes anime{
+from{
+margin-left:-30vw;
+}
+to{
+}
+}
+#form button:hover{
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+  }
+#form button{
+width: 650px;
+color: grey;
+}
+.item{
+    border: 2px black solid;
+    font-size:28px;
+    width: 640px;
+    height: 60px;
+    margin: 20px;
+    border-radius: 10px;
+    background-color: ghostwhite;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+  }
+#text{
+font-size: 20px;
+border-radius: 10px ;
+width: 650px;
+}
+@media (max-width: 1400px){
+#form{
+width: 600px;
+height: 900px;
+}
+.item{
+width: 460px;
+}
+#form button{
+width: 470px;
+}
+#text{
+font-size: 20px;
+width: 470px;
+border: 2px solid black ;
+}
+}
+@media (max-width: 900px){
+#form{
+width: 250px;
+height: 350px;
+}
+#form div{
+font-size: 20px ;
+}
+.item{
+height: 20px;
+width: 200px;
+font-size: 20px;
+margin:6px;
+}
+#form button{
+height: 25px ;
+width: 210px;
+font-size: 20px;
+line-height: 5px;
+}
+#text{
+font-size:5px;
+width: 206px;
+}
+}
+</style>
+  <!-- Project -->
+<nav>
+   <input type="checkbox" id="check">
+   <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+   <ul>
+     <li> <a href="index.html">Home</a></li>
+ <li><a href="index2 .html">Services</a></li>
+     <li><a href="index3.html">Resume</a></li>
+     <li><a href="index4.html">Projects</a></li>
+     <li><a href="index5.html">About</a></li>
+     <li><a href="index6.html" class="active">Contact</a></li>
+   </ul>
+ </nav>
+<div id="form">
+  <form onsubmit="sendemail();reset();return false;">
+    <div style="text-align: center;color: darkviolet;font-weight: bold">
+      Contact With Me
+    </div>
+    <input type="text" class="item" id="myname" placeholder="your name">
+    <input type="number" class="item" id="phone" placeholder="your mobile no">
+    <input type="email" class="item" id="email" placeholder="your email id">
+    <textarea name="text" id="text" cols="30" rows="6" placeholder="type your text"></textarea>
+    <button type="submit" class="item">send</button>
+    <button type="reset" class="item">reset</button>
+  </form>
+</div>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendemail(){
+    Email.send({
+      Host: "smtp.gmail.com",
+      Username:"&@gmail.com",
+      Password: "#",
+      To: "&.com",
+      From: document.getElementById("email").value,
+      Subject: "This is the subject",
+      Body: "Name:" + document.getElementById("myname").value +"<br> Email:" +document.getElementById("email").value +"<br>Phone-no:"+ document.getElementById("phone").value +"<br>Message:"+document.getElementById("text").value
+    }).then(
+      message => alert("Message sent successfully")
+    );
+    }
+  </script>
+</body>
+</html>
