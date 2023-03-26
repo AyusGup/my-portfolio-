@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>HTML</title>
+  
+  <!-- HTML -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+.box1{
+display: flex;
+height: 90vh;
+width: 100vw;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+}
+.box1 a{
+font-size: 3.5vw;
+text-decoration: none;
+line-height: 6vw;
+width: 40vw;
+text-align: center;
+background-color: royalblue;
+color: navy;
+border-radius: 10px;
+margin-top: 8vw ;
+animation-name: anime1;
+animation-duration: 1s;
+animation-iteration-count: infinite;
+}
+.box{
+height:22vh;
+width: 70vw;
+background: url("/20230325_110616.jpg");
+background-repeat: no-repeat ;
+background-size: 70vw 22.5vh;
+border-radius: 10px ;
+box-shadow:0vw 0vw 2.5vw green;
+animation-name: anime;
+animation-duration: 1s ;
+animation-iteration-count: infinite ;
+}
+.box1{
+display: flex;
+margin-top: 4vh;
+width: 100vw;
+height: 80vh;
+justify-content: center ;
+flex-direction: column;
+align-items: center;
+}
+@keyframes anime1{
+from{
+box-shadow:0vw 0vw 1vw blue;
+}
+to{
+box-shadow:0vw 0vw 4vw darkblue;
+}
+}
+@keyframes anime{
+from{
+box-shadow: 0vw 0vw 1vw white;
+}
+to{
+box-shadow: 0vw 0vw 4vw green;
+}
+}
+</style>
+<nav>
+   <input type="checkbox" id="check">
+   <label for="check" id="checkbtn"><i class="fa fa-bars"></i></label>
+   <ul>
+     <li><a href="index.html">Home</a></li>
+     <li> <a href="index2 .html">Services</a></li>
+     <li><a href="index3.html" class="active">Resume</a></li>
+     <li><a href="index4.html">Projects</a></li>
+     <li><a href="index5.html">About</a></li>
+     <li><a href="index6.html">Contact</a></li>
+   </ul>
+ </nav>
+<body>
+<div class="box1">
+  <div class="box">
+  </div>
+  <a href="Ayush's Resume-2.pdf" download="cv">Download-CV
+  <i class="fa fa-download"></i>
+  </a>
+</div>
+  <script src="main.js"></script>
+</body>
+</html>
