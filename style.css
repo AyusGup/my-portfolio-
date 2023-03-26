@@ -1,5 +1,5 @@
 body {
-  background:url("./cotton-pod-branch-green-background.jpg");
+  background:url('./cotton-pod-branch-green-background.jpg');
   background-size:105vw 105vh;
   background-repeat: no-repeat;
 }
@@ -84,7 +84,7 @@ transition: all 0.5s;
 }
 @media (max-width:900px){
 body {
-  background:url("./cotton-pod-branch-green-background.jpg");
+  background:url('./cotton-pod-branch-green-background.jpg');
   background-size:105vw 105vh;
   background-repeat: no-repeat;
   font-size: 30px;
