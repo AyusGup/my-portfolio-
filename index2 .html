@@ -22,11 +22,11 @@ justify-content: center;
 align-items: center ;
 flex-flow: row;
 flex-wrap: wrap;
-font-size: 2vw;
+font-size: 20px;
 }
 .box{
-height: 35vh;
-width: 40vw;
+height: 800px;
+width: 600px;
 border-radius: 10px ;
 text-align: center ;
 margin: 1.2rem;
@@ -41,6 +41,16 @@ box-shadow:0vw 0vw 1vw;
 }
 to{
 box-shadow:0vw 0vw 2vw;
+}
+}
+@media(max-width:900px){
+.box{
+width: 300px;
+height: 450px;
+}
+.box p{
+margin: 5px ;
+font-size: 15px;
 }
 }
 </style>
@@ -58,13 +68,12 @@ box-shadow:0vw 0vw 2vw;
 </nav>
 <div class="grid">
   <div class="box">
-  <div style="font-size:10vw;color:burlywood">
+  <div style="font-size:100px;color:burlywood">
     <i class="fa fa-solid fa-code"></i>
   </div>
-  <p style="font-weight:bold;font-size:3vw">Web Development</p>
-  </div>
-  <div class="box">
-    
+  <h2>Web Development</h2>
+  <p>I am capable to create fully customised websites
+  with a lovely UI and advanced features.</p>
   </div>
 </div>
 <body>
