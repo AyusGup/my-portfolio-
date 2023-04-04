@@ -15,27 +15,49 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <style>
-nav{
-float: right;
-height: 80px;
+.grid{
+display: flex;
+width: 100vw;
+margin-top: 4vh;
+justify-content: center;
+align-items: center ;
+flex-flow: row;
+flex-wrap: wrap;
+font-size: 20px;
 }
-#go{
-font-size: 40px;
-text-decoration: none;
-margin-right: 20px;
-line-height: 80px;
-height: 80px;
+.box{
+height:800px;
+width: 600px;
 border-radius: 10px ;
-background-color: goldenrod;
+text-align: center ;
+margin: 1.2rem;
+box-shadow: 0vw 0vw 2vw;
+animation-name: ani;
+animation-duration: 1s ;
+animation-iteration-count: infinite;
 }
-@media (max-width: 900px){
-nav{
-height: 50px;
+.box a{
+text-decoration: none;
+font-size: 30px;
 }
-#go{
-font-size: 15px;
-line-height: 40px;
-margin-right: 10px;
+@keyframes ani{
+from{
+box-shadow:0vw 0vw 1vw;
+}
+to{
+box-shadow:0vw 0vw 2vw;
+}
+}
+.box p{
+margin: 10px;
+}
+@media(max-width:900px){
+.box{
+width: 300px;
+height: 480px;
+}
+.box a{
+font-size: 20px;
 }
 }
 </style>
@@ -52,7 +74,16 @@ margin-right: 10px;
   </ul>
 </nav>
 <body>
-  
+  <div class="grid">
+   <div class="box">
+     <div style="font-size:100px;color:burlywood">
+       <i class="fa fa-solid fa-code"></i>
+     </div>
+<a style="font-weight:bold" href="https://ayusgup.github.io/my-portfolio-/">Portfolio website</a>
+<p>This is my portfolio that describes me,my skills and my services.</p>
+<p>This will give a glimpse of my capability to develop and design a fully working project and providing services.</p>
+   </div>
+ </div>
   <!-- Project -->
   <script src="main.js"></script>
 </body>
