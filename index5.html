@@ -21,7 +21,7 @@ margin: 20px ;
 height: 45vh;
 width: 90vw;
 text-align: center;
-font-size: 2vw;
+font-size: 40px;
 animation-name: anime1 ;
 animation-delay: 1s;
 animation-duration: 1.5s ;
@@ -29,12 +29,15 @@ animation-iteration-count: 1;
 animation-fill-mode: forwards;
 animation-timing-function: ease-in-out;
 }
+#txt p{
+font-size:30px;
+}
 #pic{
-height:35vh;
-width: 45vw;
+height:600px;
+width: 450px;
 background: url('./IMG-20230219-WA0006.jpg');
 background-repeat: no-repeat ;
-background-size: 45vw 35vh;
+background-size: 450px 600px;
 animation-name: anime2;
 }
 @keyframes anime1{
@@ -54,6 +57,19 @@ justify-content: center ;
 flex-wrap: wrap;
 align-items: center;
 }
+@media(max-width:900px){
+#pic{
+width: 200px;
+height: 250px;
+background-size: 200px 250px;
+}
+#txt{
+font-size: 15px;
+}
+#txt p{
+font-size: 12px;
+}
+}
 </style>
 <nav>
    <input type="checkbox" id="check">
@@ -71,9 +87,14 @@ align-items: center;
   <div class="ele" id="pic">
   </div>
   <div class="ele" id="txt">
-  <h1 style="font-size:4vw">ABOUT ME</h1>
-  <p style="font-size: 3vw;font-weight:bold">Frontend Developer!</p>
+<h1>ABOUT ME</h1>
+  <h4>Hello! I am Ayush.Nice to meet you.</h4>
   <p>
+  I am a Web Developer who loves to explore and learn new technologies.
+  I like to work in team and exploring my first job opportunity.
+  </p>
+  <p>
+  Currently,I am a Computer Science Engineering student at Delhi Technological University(DTU).
   </p>
   </div>
   
