@@ -25,7 +25,7 @@ nav ul li a.active,a:hover{
 background-color: burlywood;
 }
 #checkbtn{
-float: right;
+float: left;
 font-size:80px;
 margin-right: 20px;
 margin-top: 10px;
@@ -36,7 +36,7 @@ display:none;
 display: none;
 }
 #check:checked ~ ul{
-right:-12px;
+left:-12px;
 }
 @media (min-width:1200px){
 #checkbtn{
@@ -53,15 +53,15 @@ display: block;
 }
 nav ul{
 display: flex;
-width: 95vw;
-height: 100vh;
+width: 60vw;
+height: 95vh;
 background-color: burlywood;
 position: fixed;
 top: 90px;
 justify-content: center;
 align-items: center;
 flex-direction:column;
-right: -110%;
+left: -110%;
 transition: .5s;
 border-radius: 25px;
 }
@@ -98,15 +98,15 @@ font-size: 30px;
 }
 nav ul{
 display: flex;
-width: 93vw;
-height: 100vh;
+width: 60vw;
+height: 95vh;
 background-color: burlywood;
 position: fixed;
 top:40px;
 justify-content: center;
 align-items: center;
 flex-direction:column;
-right: -110%;
+left: -110%;
 transition: .5s;
 border-radius: 25px;
 }
