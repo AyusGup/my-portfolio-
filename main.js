@@ -16,5 +16,5 @@ function helper(){
   idx++
 }
 function auth(){
-  setInterval(helper,100)
+  setInterval(helper,120)
 }
