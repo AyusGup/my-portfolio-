@@ -38,7 +38,7 @@ display:none;
 display: none;
 }
 #check:checked ~ ul{
-left:0;
+left:0px;
 }
 @media (min-width:1200px){
 #checkbtn{
