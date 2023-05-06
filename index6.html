@@ -102,32 +102,31 @@ margin-top:2%;
  </nav>
 <body>
 <div id="form">
-  <form onsubmit="sendemail();reset();return false;">
+  <form  action="">
     <div style="text-align: center;color: darkviolet;font-weight: bold">
       Contact With Me
     </div>
-    <input type="text" class="item" id="myname" placeholder="your name">
-    <input type="number" class="item" id="phone" placeholder="your mobile no">
-    <input type="email" class="item" id="email" placeholder="your email id">
+    <input type="text" class="item" id="myname" placeholder="your name" required>
+    <input type="number" class="item" id="phone" placeholder="your mobile no" required>
+    <input type="email" class="item" id="email" placeholder="your email id" required>
     <textarea name="text" id="text" cols="30" rows="6" placeholder="type your text"></textarea>
-    <button type="submit" class="item">send</button>
+    <button type="button" class="item" onclick="sendemail();reset()">send</button>
     <button type="reset" class="item">reset</button>
   </form>
 </div>
-  <script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
   <script>
     function sendemail(){
     Email.send({
-      Host: "smtp.gmail.com",
-      Username:"&@gmail.com",
-      Password: "#",
-      To: "&.com",
-      From: document.getElementById("email").value,
-      Subject: "This is the subject",
-      Body: "Name:" + document.getElementById("myname").value +"<br> Email:" +document.getElementById("email").value +"<br>Phone-no:"+ document.getElementById("phone").value +"<br>Message:"+document.getElementById("text").value
+    SecureToken : "baf7a9a3-6e5f-4ce6-8a95-44ce56f8a86b",
+    To : 'adgj77297@gmail.com',
+    From : "adgj77297@gmail.com",
+    Subject : "This is the subject",
+    Body: "Name:" + document.getElementById("myname").value +"<br> Email:" +document.getElementById("email").value +"<br>Phone-no:"+ document.getElementById("phone").value +"<br>Message:"+document.getElementById("text").value
     }).then(
-      message => alert("Message sent successfully")
-    );
+  message => alert(message)
+);
     }
   </script>
 </body>
